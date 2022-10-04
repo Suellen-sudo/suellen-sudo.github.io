@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fazendo Tudo de Novo...</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt&family=Titillium+Web&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css" />
+  </head>
+<body class="bgColor">
+    <div class="container">
+    <header>
+            <!--Menu responsivo-->
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <a class=" navbar-hover navbar-brand" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-command" viewBox="0 0 16 16">
+                      <path d="M3.5 2A1.5 1.5 0 0 1 5 3.5V5H3.5a1.5 1.5 0 1 1 0-3zM6 5V3.5A2.5 2.5 0 1 0 3.5 6H5v4H3.5A2.5 2.5 0 1 0 6 12.5V11h4v1.5a2.5 2.5 0 1 0 2.5-2.5H11V6h1.5A2.5 2.5 0 1 0 10 3.5V5H6zm4 1v4H6V6h4zm1-1V3.5A1.5 1.5 0 1 1 12.5 5H11zm0 6h1.5a1.5 1.5 0 1 1-1.5 1.5V11zm-6 0v1.5A1.5 1.5 0 1 1 3.5 11H5z"/>
+                    </svg>
+                </a>
+              <a class="navbar-brand" href="#"><span class="h3">Command</span></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon te"></span>
+              </button>
+              <div class="col-sm">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Alunos <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contato <span class="sr-only">(current)</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      </nav>
+    </header>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <form class="text-dark">
+                <div class="form-group">
+                  <p class=" h4 text-center font-italic">Cadastro de Alunos</p>
+                  <label for="nomeAluno"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg>Nome do Aluno</label>
+                  <input type="text" class="form-control" id="nomeAluno" required>
+                </div>
+                <div class="form-group" style="background-color: #f0f8ff;">
+                    <label for="dataNascimento"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+                      <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                    </svg> Data de Nascimento</label>
+                    <input type="date" class="form-control" id="dataNascimento" required>
+                  </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
+                    <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                  </svg> Curso Escolhido</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Alemão</option>
+                    <option>Espanhol</option>
+                    <option>Francês</option>
+                    <option>Inglês</option>
+                    <option>Italiano</option>
+                  </select>
+                  <!--Checkbox-->
+                  <fieldset class="form-group row">
+                    <legend class="col-form-label col-sm-2 float-sm-left pt-0">Nível Escolhido</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="gridCheck1" id="gridCheckbasico" value="basico" checked>
+                            <label class="form-check-label" for="gridCheckbasico">
+                            Básico
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="gridCheck2" id="gridCheckientermediario" value="intermediario">
+                            <label class="form-check-label" for="gridRadioientermediario">
+                            Intermediário
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="gridCheck3" id="gridCheckavancado" value="avancado" checked>
+                            <label class="form-check-label" for="gridCheckavancado">
+                            Avançado
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                </div>
+                <!--Radios-->
+                <fieldset class="form-group row">
+                <legend class="col-form-label col-sm-2 float-sm-left pt-0">Turno Escolhido</legend>
+                <div class="col-sm-10">
+                    <div class="form-radio">
+                        <input class="form-radio-input" type="radio" name="gridRadios" id="gridRadios1" value="manha" checked>
+                        <label class="form-radio-label" for="gridRadios1">
+                        Manhã
+                        </label>
+                    </div>
+                    <div class="form-radio">
+                        <input class="form-radio-input" type="radio" name="gridRadios" id="gridRadios2" value="tarde">
+                        <label class="form-radio-label" for="gridRadios2">
+                        Tarde
+                        </label>
+                    </div>
+                    <div class="form-radio">
+                        <input class="form-radio-input" type="radio" name="gridRadios" id="gridRadios3" value="noite" checked>
+                        <label class="form-radio-label" for="gridRadios3">
+                        Noite
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+                <div class="form-group">
+                  <label for="areaTexto">Observações</label>
+                  <textarea class="form-control" id="areaTexto" rows="3"></textarea>
+                </div>
+                <input class="btn btn-success" type="submit" value="Salvar">
+                <input class="btn btn-dark" type="reset" value="Limpar">
+              </form>
+              <!--Tabela-->
+          </div>
+          <div class="col-lg">
+            <p class="h4 text-center font-italic ">Últimos alunos cadastrados</p>
+            <table class="table table-hover text-dark">
+                <thead class="col-xlg">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Data de Nascimento</th>
+                    <th scope="col">Curso</th>
+                    <th scope="col">Nível</th>
+                    <th scope="col">Turno das Aulas</th>
+                    <th scope="col">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Gabriel Fernandes</td>
+                    <td>01/04/2012</td>
+                    <td>Inglês</td>
+                    <td>Básico</td>
+                    <td>Manhã</td>
+                    <td>
+                        <button type="button" class="btn btn-primary btn-sm">Editar</button>
+                        <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Yasmin Castro</td>
+                    <td>02/03/2010</td>
+                    <td>Italiano</td>
+                    <td>Básico</td>
+                    <td>Tarde</td>
+                    <td>
+                        <button type="button" class="btn btn-primary btn-sm">Editar</button>
+                        <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Marcela Nunes</td>
+                    <td>23/02/2005</td>
+                    <td>Espanhol</td>
+                    <td>Avançado</td>
+                    <td>Noite</td>
+                    <td>
+                        <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-pen-fill"></i>Editar</button>
+                        <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+                    </td>
+                  </tr>
+                  
+                    <th scope="row">4</th>
+                    <td>João Guilherme Gomes</td>
+                    <td>19/08/2004</td>
+                    <td>Espanhol</td>
+                    <td>Kids</td>
+                    <td>Noite</td>
+                    <td>
+                        <button type="button" class="btn btn-primary btn-sm btn-sm">Editar</button>
+                        <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+                    </td>
+                  </tr>
+                  
+                    <th scope="row">5</th>
+                    <td>Julia Moraes</td>
+                    <td>22/07/2010</td>
+                    <td>Francês</td>
+                    <td>Intermediário</td>
+                    <td>Tarde</td>
+                    <td>
+                        <button type="button" class="btn btn-primary btn-sm">Editar</button>
+                        <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
