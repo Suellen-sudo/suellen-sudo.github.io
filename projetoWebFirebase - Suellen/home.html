@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap 5 CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Menu Inicial</title>
+  </head>
+<body onload="verificaLogado(); obtemDados('alunos')" >
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-command" viewBox="0 0 16 16">
+          <path d="M3.5 2A1.5 1.5 0 0 1 5 3.5V5H3.5a1.5 1.5 0 1 1 0-3zM6 5V3.5A2.5 2.5 0 1 0 3.5 6H5v4H3.5A2.5 2.5 0 1 0 6 12.5V11h4v1.5a2.5 2.5 0 1 0 2.5-2.5H11V6h1.5A2.5 2.5 0 1 0 10 3.5V5H6zm4 1v4H6V6h4zm1-1V3.5A1.5 1.5 0 1 1 12.5 5H11zm0 6h1.5a1.5 1.5 0 1 1-1.5 1.5V11zm-6 0v1.5A1.5 1.5 0 1 1 3.5 11H5z"/>
+        </svg>
+        Command
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"  href="home.html">Alunos</a>
+          </li>
+        </ul>
+      </div>
+      <div class="text-right">
+        <ul class="navbar-nav ms-auto flex-nowrap">
+            <li class="nav-item">
+              <button class="btn  btn-block btn-danger" onclick="logoutFirebase()">Logout</button>
+            </li>
+        </ul>
+    </div>
+    </div>
+  </nav>
+
+
+  <div class="container my-3">
+    <div class="row my-3">
+      <div class="col-md-4">
+        <form class="text-dark">
+          <div class="form-group">
+            <p class="h4 text-center font-italic"><i class="bi bi-person-fill-add"></i>  Cadastro de Alunos</p>
+          </div>
+          <div class="form-group">
+            <input type="hidden" class="form-control" name="id" id="id" >
+          </div>
+          <div class="form-group my-2">
+            <label class="form-label" for="nomeAluno">
+            <!--<svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>-->
+            <i class="bi bi-person-fill"></i>
+            Nome do Aluno</label>
+            <input type="text" class="form-control" id="nomeAluno" name="nome" required>
+          </div>
+          <div class="form-group my-2">
+              <label class="form-label" for="dataNascimento">
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16"><path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/></svg>--> 
+                <i class="bi bi-calendar-week-fill"></i>
+                Data de Nascimento
+              </label>
+              <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
+          </div>
+          <div class="form-group my-2">
+            <label class="form-label" for="nomeCurso">
+              <!--<svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16"><path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/></svg> -->
+              <i class="bi bi-book-fill"></i> 
+              Curso Escolhido
+            </label>
+            <select class="form-control" id="nomeCurso" name="nomeCurso" required>
+              <option selected>Selecione uma lingua</option>
+              <option value="Alemão">Alemão</option>
+              <option value="Espanhol">Espanhol</option>
+              <option value="Francês">Francês</option>
+              <option value="Inglês">Inglês</option>
+              <option value="Italiano">Italiano</option>
+            </select>
+          </div>
+          <div class="my-2" >
+            <!--Checkbox-->
+            <fieldset class="form-group row">
+              <legend class="col-form-label col-sm-4 float-sm-left pt-0">
+                <i class="bi bi-patch-check-fill"></i> 
+                Nível Escolhido</legend>
+              <div class="col-sm-8">
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="chkBasico" id="gridCheckBasico" value="1">
+                      <label class="form-check-label" for="gridCheckbasico">
+                      Básico
+                      </label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="chkIntermediario" id="gridCheckIntermediario" value="1">
+                      <label class="form-check-label" for="gridCheckIntermediario">
+                      Intermediário
+                      </label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="chkAvancado" id="gridCheckAvancado" value="1">
+                      <label class="form-check-label" for="gridCheckAvancado">
+                      Avançado
+                      </label>
+                  </div>
+              </div>
+            </fieldset>
+            </div>
+            <!--Radios-->
+            <div class="my-2">
+              <fieldset class="form-group row">
+                <legend class="col-form-label col-sm-4 float-sm-left pt-0"><i class="bi bi-alarm-fill"></i>
+                  Turno Escolhido</legend>
+                <div class="col-sm-8">
+                    <div class="form-radio">
+                      <input class="form-radio-input" type="radio" name="periodo" id="gridRadiosManha" value="Manhã">
+                      <label class="form-radio-label" for="gridRadiosManha">
+                      Manhã
+                      </label>
+                    </div>
+                    <div class="form-radio">
+                      <input class="form-radio-input" type="radio" name="periodo" id="gridRadiosTarde" value="Tarde">
+                      <label class="form-radio-label" for="gridRadiosTarde">
+                      Tarde
+                      </label>
+                    </div>
+                    <div class="form-radio">
+                      <input class="form-radio-input" type="radio" name="periodo" id="gridRadiosNoite" value="Noite">
+                      <label class="form-radio-label" for="gridRadiosNoite">
+                      Noite
+                      </label>
+                    </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-group my-2">
+              <label class="form-label" for="areaTexto"><i class="bi bi-chat-square-fill"></i> Observações</label>
+              <textarea class="form-control" id="areaTexto" name="txtObs" rows="3"></textarea>
+            </div>
+            
+            <div class="form-group text-center">
+              <button class="btn btn-block btn-success my-4" onclick="salvar(event, 'alunos')"><i class="bi bi-save"></i> Salvar</button>
+              <button type="reset" class="btn btn-block btn-primary my-4" ><i class="bi bi-x-circle"></i> Limpar</button>
+            </div>
+        </form>
+
+      </div>
+
+      <div class="col-md-8">
+        <p class="h4 text-center font-italic"><i class="bi bi-clipboard2-data-fill"></i> Listagem de Alunos</p>
+        <table id="tabelaDados" class="table table-bordered table-striped">
+        <!-- Conteúdo do Firebase será carregado aqui -->
+        </table>
+      </div>
+
+    </div>
+  </div>
+<!-- Firebase Google -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
+<!-- Bootstrap 5 JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Nossos scripts -->
+  <script src="js/firebase.js"></script>  
+  <script src="js/authentication.js"></script>
+  <script src="js/dados.js"></script>
+</body>
+</html>
+
