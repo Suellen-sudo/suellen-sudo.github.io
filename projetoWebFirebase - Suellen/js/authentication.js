@@ -1,7 +1,7 @@
 //baseURL
 const baseURL = window.location.hostname.includes('127.0.0.1')
-? 'http://suellen-sudo.github.io/projetoWebFirebase-Suellen'
-: 'https://command-language-school-default-rtdb.firebaseio.com/'
+? 'http://127.0.0.1:5500'
+: 'http://suellen-sudo.github.io/projetoWebFirebase-Suellen'
 /**
  * novoUsuario.
  * Cria um novo usuário no Firebase.
